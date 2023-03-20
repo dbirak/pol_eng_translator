@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Learn">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#202125"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#202125"
+            android:minHeight="730dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="390dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:background="@color/backgroundMain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/deleteButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="40dp"
+                    android:background="#00FFFFFF"
+                    android:foregroundTint="#00FFFFFF"
+                    android:minWidth="32dp"
+                    android:minHeight="48dp"
+                    android:onClick="deleteWord"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_delete_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/exploreButton"
+                    app:layout_constraintTop_toBottomOf="@+id/langHead7"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/exploreButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="#00FFFFFF"
+                    android:foregroundTint="#00FFFFFF"
+                    android:minWidth="32dp"
+                    android:minHeight="48dp"
+                    android:onClick="exploreWord"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_menu_book_2412"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/langHead7"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/addButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="40dp"
+                    android:background="#00FFFFFF"
+                    android:foregroundTint="#00FFFFFF"
+                    android:minWidth="32dp"
+                    android:minHeight="48dp"
+                    android:onClick="addWord"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_add_circle_24"
+                    app:layout_constraintEnd_toStartOf="@+id/exploreButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/langHead7"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/langHead7"
+                    android:layout_width="210dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="60dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:letterSpacing="0.05"
+                    android:text="Aktualna liczba fiszek:"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/greenMain"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pl2enButton" />
+
+                <TextView
+                    android:id="@+id/countWord"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:letterSpacing="0.05"
+                    android:text="0"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/greenMain"
+                    android:textSize="18dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pl2enButton" />
+
+                <Button
+                    android:id="@+id/pl2enButton"
+                    android:layout_width="250dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/greenMain"
+                    android:drawableTint="@color/greenMain"
+                    android:fontFamily="sans-serif-medium"
+                    android:onClick="learnMode"
+                    android:text="Z POLSKIEGO NA ANGIELSKI"
+                    android:textColor="@color/backgroundMain"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/en2plButton"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/en2plButton"
+                    android:layout_width="250dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/greenMain"
+                    android:drawableTint="@color/greenMain"
+                    android:fontFamily="sans-serif-medium"
+                    android:onClick="learnMode"
+                    android:text="Z ANGIELSKIEGO NA POLSKI"
+                    android:textColor="@color/backgroundMain"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/head"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/head"
+                    android:layout_width="210dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:letterSpacing="0.05"
+                    android:text="Wybierz Tryb"
+                    android:textAlignment="center"
+                    android:textColor="@color/greenMain"
+                    android:textSize="18dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/backgroundMain6"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="#98f792"
+        app:layout_constraintStart_toStartOf="@+id/scrollView"
+        app:layout_constraintTop_toTopOf="@+id/scrollView" />
+
+    <ImageButton
+        android:id="@+id/translateButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="70dp"
+        android:background="#00FFFFFF"
+        android:foregroundTint="#00FFFFFF"
+        android:minWidth="32dp"
+        android:minHeight="48dp"
+        android:onClick="translateActivity"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_baseline_translate_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/informationButton3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:background="#00FFFFFF"
+        android:foregroundTint="#00FFFFFF"
+        android:minWidth="32dp"
+        android:minHeight="48dp"
+        android:onClick="informationActivity"
+        android:scaleType="fitCenter"
+        android:src="@drawable/information"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/logo3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/translation" />
+
+    <TextView
+        android:id="@+id/name3"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="137dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text="Pol-Eng-Translator"
+        android:textAlignment="viewStart"
+        android:textColor="@color/backgroundMain"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/informationButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

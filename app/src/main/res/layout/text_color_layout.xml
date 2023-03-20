@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/item_text"
+    android:text="hello"
+    android:textSize="17sp"
+    android:textColor="@color/greenMain"
+    android:fontFamily="sans-serif-medium"
+    android:layout_width="match_parent"
+    android:paddingLeft="20dp"
+    android:layout_height="50dp"
+    android:gravity="center"
+    android:textAlignment="viewStart"
+    android:letterSpacing="0.05"
+    android:layout_marginBottom="0dp">
+
+</TextView>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundMain"
+    tools:context=".DeleteCards">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#202125"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#202125"
+            android:minHeight="730dp">
+
+            <ListView
+                android:id="@+id/List"
+                android:layout_width="390dp"
+                android:layout_height="550dp"
+                android:layout_marginTop="180dp"
+                android:background="@color/backgroundContainer"
+                android:foregroundTint="@color/greenMain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="18sp"
+                android:textColor="@color/greenMain"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/backgroundMain7"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="#98f792"
+        app:layout_constraintStart_toStartOf="@+id/scrollView"
+        app:layout_constraintTop_toTopOf="@+id/scrollView" />
+
+    <TextView
+        android:id="@+id/name6"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="137dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text="Pol-Eng-Translator"
+        android:textAlignment="viewStart"
+        android:textColor="@color/backgroundMain"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/informationButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo6"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/translation" />
+
+    <ImageButton
+        android:id="@+id/backButton4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:background="#00FFFFFF"
+        android:foregroundTint="#00FFFFFF"
+        android:minWidth="32dp"
+        android:minHeight="48dp"
+        android:onClick="back"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_baseline_clear_2412312"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <View
+        android:id="@+id/backgroundMain8"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:background="#98f792"
+        app:layout_constraintStart_toStartOf="@+id/scrollView"
+        app:layout_constraintTop_toTopOf="@+id/scrollView" />
+
+    <TextView
+        android:id="@+id/head3"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="90dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:letterSpacing="0.05"
+        android:text="Kliknij aby usunąć fiszkę"
+        android:textAlignment="center"
+        android:textColor="@color/backgroundMain"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

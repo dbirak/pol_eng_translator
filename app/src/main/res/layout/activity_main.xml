@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202125"
+    android:orientation="vertical"
+
+
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#202125"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#202125"
+            android:minHeight="730dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="390dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="180dp"
+                android:background="@color/backgroundContainer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/clearButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="#00FFFFFF"
+                    android:foregroundTint="#00FFFFFF"
+                    android:minWidth="32dp"
+                    android:minHeight="48dp"
+                    android:onClick="clearEditText"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_clear_24"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/text1"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/backgroundContainer"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="Wprowadź tekst"
+                    android:inputType="textMultiLine"
+                    android:letterSpacing="0.02"
+                    android:minHeight="48dp"
+                    android:paddingTop="5dp"
+                    android:singleLine="false"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/greenMain"
+                    android:textColorHint="#51545d"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/head"
+                    tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/head"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:letterSpacing="0.05"
+                    android:text="Polski"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/greenMain"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toEndOf="@+id/speakerButton1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/speakerButton1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#00FFFFFF"
+                    android:foregroundTint="#00FFFFFF"
+                    android:minWidth="32dp"
+                    android:minHeight="48dp"
+                    android:onClick="readText"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_volume_up_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text1">
+
+                    <TextView
+                        android:id="@+id/countLetter"
+                        android:layout_width="90dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="0  / 1000"
+                        android:textAlignment="textEnd"
+                        android:textColor="#51545D"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#00FFFFFF"
+                        android:foregroundTint="#00FFFFFF"
+                        android:minWidth="32dp"
+                        android:minHeight="48dp"
+                        android:onClick="galleryInput"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_baseline_image_24"
+                        app:layout_constraintEnd_toStartOf="@+id/countLetter"
+                        app:layout_constraintStart_toEndOf="@+id/microphoneButton"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                    <ImageButton
+                        android:id="@+id/microphoneButton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#00FFFFFF"
+                        android:foregroundTint="#00FFFFFF"
+                        android:minWidth="32dp"
+                        android:minHeight="48dp"
+                        android:onClick="voiceInputText"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_baseline_keyboard_voice_24"
+                        app:layout_constraintEnd_toStartOf="@+id/countLetter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                    <ImageButton
+                        android:id="@+id/cameraButton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#00FFFFFF"
+                        android:foregroundTint="#00FFFFFF"
+                        android:minWidth="32dp"
+                        android:minHeight="48dp"
+                        android:onClick="cameraInput"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_baseline_camera_alt_24"
+                        app:layout_constraintEnd_toStartOf="@+id/microphoneButton"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="390dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/greenMain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+                <ImageButton
+                    android:id="@+id/copyButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="#00FFFFFF"
+                    android:foregroundTint="#00FFFFFF"
+                    android:minWidth="32dp"
+                    android:minHeight="48dp"
+                    android:onClick="copyText"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_content_copy_24asdasdasd"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/text2"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/greenMain"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:gravity="start|top"
+                    android:hint="Tłumaczenie"
+                    android:inputType="textMultiLine"
+                    android:letterSpacing="0.02"
+                    android:minHeight="48dp"
+                    android:paddingTop="5dp"
+                    android:singleLine="false"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/backgroundMain"
+                    android:textColorHint="#51545d"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/langHead2"
+                    tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/langHead2"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:letterSpacing="0.05"
+                    android:text="Angielski"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/backgroundMain"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toEndOf="@+id/speakerButton2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/speakerButton2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#00FFFFFF"
+                    android:foregroundTint="#00FFFFFF"
+                    android:minWidth="32dp"
+                    android:minHeight="48dp"
+                    android:onClick="readText"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_volume_up_242"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/backgroundMain"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="#98f792"
+        app:layout_constraintStart_toStartOf="@+id/scrollView"
+        app:layout_constraintTop_toTopOf="@+id/scrollView" />
+
+    <ImageButton
+        android:id="@+id/learnButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="70dp"
+        android:background="#00FFFFFF"
+        android:foregroundTint="#00FFFFFF"
+        android:minWidth="32dp"
+        android:minHeight="48dp"
+        android:onClick="learnActivity"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_baseline_menu_book_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <View
+        android:id="@+id/backgroundMain2"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:background="#98f792"
+        app:layout_constraintStart_toStartOf="@+id/scrollView"
+        app:layout_constraintTop_toTopOf="@+id/scrollView" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/translation" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="137dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text="Pol-Eng-Translator"
+        android:textAlignment="viewStart"
+        android:textColor="@color/backgroundMain"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/informationButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/informationButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:background="#00FFFFFF"
+        android:foregroundTint="#00FFFFFF"
+        android:minWidth="32dp"
+        android:minHeight="48dp"
+        android:onClick="informationActivity"
+        android:scaleType="fitCenter"
+        android:src="@drawable/information"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/lang2"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/greenMain"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Angielski"
+        android:textColor="@color/backgroundMain"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/changeButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="90dp"
+        android:background="#00FFFFFF"
+        android:foregroundTint="#00FFFFFF"
+        android:minWidth="32dp"
+        android:minHeight="48dp"
+        android:onClick="changeLangInput"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_baseline_change_circle_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/lang1"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="90dp"
+        android:background="@color/greenMain"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Polski"
+        android:textColor="@color/backgroundMain"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
